@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->string('title');
             $table->string('author');
-            $table->dateTime('date', 0);
+            $table->decimal('price');
 
             $table->timestamps();
         });

@@ -19,7 +19,7 @@ class ComicFactory extends Factory
         return [
             'title' => fake () -> word(),
             'author' => fake () -> name(),
-            'date' => fake () -> dateTimeBetween('-1 week', '+1 week' ),
+            'price' => fake () -> numberBetween(5, 50),
         ];
     }
 }

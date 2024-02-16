@@ -16,8 +16,8 @@
     </span>
     <br>
     <span>
-        Data di pubblicazione: 
-        {{$comic -> date}}
+        Prezzo: 
+        {{$comic -> price}}
     </span>
 
 @endsection

@@ -4,6 +4,11 @@
 @endsection
 @section('content')
     <h1>Comics: {{ count($comics) }}</h1>
+    <button>
+        <a href="{{route('users.create')}}">ADD NEW</a>
+    </button>
+    <br>
+    <br>
     <ul>
     @foreach ($comics as $comic)
         <li>
