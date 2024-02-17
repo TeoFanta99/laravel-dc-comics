@@ -15,7 +15,14 @@
             <a href="{{route('users.show', $comic -> id)}}">
                 {{$comic -> title}}
             </a>
+            <form method="POST" action="{{route('users.destroy', $comic -> id)}}" class="d-inline-block">
+
+                @csrf
+                @method('DELETE')
+
+                <input type="submit" value="X">
+            </form>
         </li>
-    @endforeach
+    @endforeach  
     </ul>
 @endsection
