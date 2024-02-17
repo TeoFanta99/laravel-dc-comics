@@ -15,6 +15,9 @@
             <a href="{{route('users.show', $comic -> id)}}">
                 {{$comic -> title}}
             </a>
+            <a href="{{route('users.edit', $comic -> id)}}" class="mx-3">
+                EDIT 
+            </a>
             <form method="POST" action="{{route('users.destroy', $comic -> id)}}" class="d-inline-block">
 
                 @csrf

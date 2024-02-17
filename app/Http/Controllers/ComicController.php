@@ -39,14 +39,15 @@ class ComicController extends Controller
     {
         $data = $request -> all();
         
-    $newComic = new Comic();
-    $newComic -> title = $data['title'];
-    $newComic -> author = $data['author'];
-    $newComic -> price = $data['price'];
+        $newComic = new Comic();
 
-    $newComic -> save();
+        $newComic -> title = $data['title'];
+        $newComic -> author = $data['author'];
+        $newComic -> price = $data['price'];
 
-    return redirect() -> route('users.show', $newComic -> id);
+        $newComic -> save();
+
+        return redirect() -> route('users.show', $newComic -> id);
 
     }
 
@@ -71,7 +72,8 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Comic :: find($id);
+        return view ('pages.edit', compact('comic'));
     }
 
     /**
@@ -83,7 +85,17 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $comic = Comic :: find($id);
+
+        $data = $request -> all();
+
+        $comic -> title = $data['title'];
+        $comic -> author = $data['author'];
+        $comic -> price = $data['price'];
+
+        $comic -> save(); 
+
+        return redirect() -> route('users.index');
     }
 
     /**
