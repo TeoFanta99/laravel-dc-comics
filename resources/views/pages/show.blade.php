@@ -19,7 +19,7 @@
         Prezzo: 
         {{$comic -> price}}
     </span>
-    <a href="{{route('users.index')}}" class="d-block">
+    <a href="{{route('comics.index')}}" class="d-block">
         RETURN HOME
     </a>
 

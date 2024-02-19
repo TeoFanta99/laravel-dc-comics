@@ -3,10 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController;
 
-Route::get('/', [ComicController :: class, 'index']) -> name('users.index');
-Route::get('/users/create', [ComicController :: class, 'create']) -> name('users.create');
-Route::post('/users', [ComicController :: class, 'store']) -> name('users.store');
-Route::get('/users/{id}', [ComicController :: class, 'show']) -> name('users.show');
-Route::delete('users/{id}', [ComicController :: class, 'destroy']) -> name('users.destroy');
-Route::get('users/{id}/edit', [ComicController :: class, 'edit']) -> name('users.edit');
-Route::put('users/{id}', [ComicController :: class, 'update']) -> name('users.update');
+Route::get('/', [ComicController :: class, 'index']) -> name('comics.index');
+Route::get('/comics/create', [ComicController :: class, 'create']) -> name('comics.create');
+Route::post('/comics', [ComicController :: class, 'store']) -> name('comics.store');
+Route::get('/comics/{id}', [ComicController :: class, 'show']) -> name('comics.show');
+Route::delete('comics/{id}', [ComicController :: class, 'destroy']) -> name('comics.destroy');
+Route::get('comics/{id}/edit', [ComicController :: class, 'edit']) -> name('comics.edit');
+Route::put('comics/{id}', [ComicController :: class, 'update']) -> name('comics.update');

@@ -5,7 +5,7 @@
 @section('content')
 <h1>NEW COMIC</h1>
 <form 
-    action="{{route('users.store')}}"
+    action="{{route('comics.store')}}"
     method="POST"
 >
 
