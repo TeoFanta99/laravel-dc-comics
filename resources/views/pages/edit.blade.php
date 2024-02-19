@@ -8,7 +8,7 @@
     EDIT COMIC
 </h1>
 
-@if ($errors->any())
+{{-- @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $error)
@@ -16,7 +16,7 @@
             @endforeach
         </ul>
     </div>
-@endif
+@endif --}}
 
 
 <form 
@@ -30,12 +30,21 @@
     <label for="title">Titolo</label>
     <input type="text" name="title" id="title" value="{{$comic -> title}}">
     <br>
+    @error ('title')
+        <div class="alert alert-danger">{{$message}}</div>
+    @enderror
     <label for="author">Autore</label>
     <input type="text" name="author" id="author" value="{{$comic -> author}}">
     <br>
+    @error ('author')
+        <div class="alert alert-danger">{{$message}}</div>
+    @enderror
     <label for="price">Prezzo</label>
     <input type="text" name="price" id="price" value="{{$comic -> price}}">
     <br>
+    @error ('price')
+        <div class="alert alert-danger">{{$message}}</div>
+    @enderror
     <input type="submit" value="UPDATE">
 </form>
 
